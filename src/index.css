@@ -76,3 +76,7 @@ body {
   outline: none;
   transform: scale(1.02);
 }
+
+.filter {
+  display: none;
+}
