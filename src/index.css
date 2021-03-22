@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
 }
 
+.container-app::-webkit-scrollbar {
+  display: none;
+}
+
 .title {
   text-align: center;
 }
