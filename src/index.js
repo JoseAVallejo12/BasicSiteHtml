@@ -12,7 +12,6 @@ getUsers().then((res) => {
 
     /* Create user name */
     const name = document.createElement("p");
-    name.className = "user-name";
     name.innerHTML =
       "<b>" + user.name + "</b> <span>-- " + user.username + "</span>";
 
@@ -22,15 +21,8 @@ getUsers().then((res) => {
     const address = document.createElement("address");
     address.innerText = street + " " + suite + ", " + city;
 
-    const text = document.createElement("h6");
-    text.innerText = `hola ${user.name} !`;
-    text.style.color = "red";
-    text.style.paddingTop = "10px";
-    text.style.margin = "0px";
-
     card.appendChild(name);
     card.appendChild(address);
-    card.appendChild(text);
 
     /* Append element to list */
     userList.appendChild(card);
@@ -39,8 +31,6 @@ getUsers().then((res) => {
   app.appendChild(userList);
 });
 
-function getUsers() {
-  return fetch("https://jsonplaceholder.typicode.com/users").then((res) =>
-    res.json()
-  );
+async function getUsers() {
+  return (await fetch("https://jsonplaceholder.typicode.com/users")).json()
 }
