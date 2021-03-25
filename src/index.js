@@ -1,13 +1,11 @@
 const app = document.getElementById("app");
 
-const userList = document.createElement("div");
-userList.className = "user-list";
 
 getUsers().then((res) => {
   res.forEach((user) => {
     /* Create list item */
     const card = document.createElement("div");
-    card.className = "user";
+    card.className = "col-10 col-sm-6 col-md-4 col-xl-3 user__card";
     card.id = `user${user.id}`;
 
     /* Create user name */
@@ -25,10 +23,8 @@ getUsers().then((res) => {
     card.appendChild(address);
 
     /* Append element to list */
-    userList.appendChild(card);
+    app.appendChild(card);
   });
-
-  app.appendChild(userList);
 });
 
 async function getUsers() {

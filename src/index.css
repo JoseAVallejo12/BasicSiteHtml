@@ -43,26 +43,19 @@ body {
 }
 
 .search-wrapper .search {
+  flex-basis: 95%;
   width: 300px;
   height: 25px;
   border: none;
   padding-left: 10px;
 }
 
-.user-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
+.users {
   margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  background-color: rgba(231, 231, 231, 0.3);
 }
 
-.user {
-  width: 200px;
-  height: 120px;
+.user__card {
+  height: 140px;
   padding: 16px;
   margin: 8px;
   box-shadow: 0px 0px 5px 1px gray;

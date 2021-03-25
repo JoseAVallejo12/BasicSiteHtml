@@ -40,6 +40,7 @@ body {
     margin: 0 5px 0 0;
   }
   .search {
+    flex-basis: 95%;
     width: 300px;
     height: 25px;
     border: none;
@@ -47,20 +48,13 @@ body {
   }
 }
 
-.user-list {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: 100%;
+.users {
   margin: 0 auto;
-  padding: 0;
-  list-style: none;
-  background-color: rgba($color: #e7e7e7, $alpha: 0.3);
 }
 
-.user {
-  width: 200px;
-  height: 120px;
+.user__card {
+  // width: 200px;
+  height: 140px;
   padding: 16px;
   margin: 8px;
   box-shadow: 0px 0px 5px 1px gray;
